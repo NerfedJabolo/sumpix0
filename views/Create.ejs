@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumpix | Create</title>
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav class="flex justify-between px-10 py-8 navbar">
+      <div class="navbar-left flex gap-6">
+        <div class="navbar-brand">
+          <img src="/assets/logo.png" alt="" width="55" height="55" />
+        </div>
+        <ul class="list flex gap-5">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/demss233">Github</a></li>
+          <li><a href="mailto:shivsatyam86@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <button class="button-pink-filled">Get Started</button>
+      </div>
+    </nav>
+
+    <form
+      method="POST"
+      class="form flex flex-col mt-40 sm:mt-10 w-fit mx-auto gap-4"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        class="w-[97vw] sm:w-[500px] sm: h-[45px] p-4 bg-transparent border border-solid border-white outline-none text-white rounded-md"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        class="w-[97vw] sm:w-[500px] h-[45px] p-4 bg-transparent border border-solid border-white outline-none text-white rounded-md"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        name="keyword"
+        placeholder="Keyword"
+        class="w-[97vw] sm:w-[500px] h-[45px] p-4 bg-transparent border border-solid border-white outline-none text-white rounded-md"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        name="points"
+        placeholder="Number of points."
+        class="w-[97vw] sm:w-[500px] h-[45px] p-4 bg-transparent border border-solid border-white outline-none text-white rounded-md"
+        autocomplete="off"
+      />
+      <textarea
+        type="text"
+        name="paragraph"
+        rows="6"
+        placeholder="Paragraph"
+        class="p-4 bg-transparent border border-solid border-white outline-none text-white rounded-md"
+        autocomplete="off"
+      ></textarea>
+      <div class="buttons-form flex gap-4">
+        <button class="button-pink-filled" type="submit">Create</button>
+        <button class="button-pink-outlined">Docs</button>
+      </div>
+    </form>
+    <div
+      class="footer bg-[#1c1c1c] w-[100%] mt-60 p-10 flex flex-col gap-4 justify-center items-center"
+    >
+      <div class="footer-heading">
+        <h1 class="text-white text-3xl font-semibold">Questions ?</h1>
+      </div>
+      <div class="footer-details">
+        <p class="text-[#b6b5b2]">
+          If there is something you want to tell us. You can Contact
+        </p>
+      </div>
+      <div class="footer-buttons flex gap-4 mt-6">
+        <button class="button-pink-filled">Github</button>
+        <button class="button-pink-outlined">Discord</button>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/navbar.js"></script>
+</html>

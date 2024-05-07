@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumpix | View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/article.css" />
+  </head>
+  <body>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav class="flex justify-between px-10 py-8 navbar">
+      <div class="navbar-left flex gap-6">
+        <div class="navbar-brand">
+          <img src="/assets/logo.png" alt="" width="55" height="55" />
+        </div>
+        <ul class="list flex gap-5">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="https://github.com/demss233">Github</a></li>
+          <li><a href="mailto:shivsatyam86@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <button class="button-pink-filled">Get Started</button>
+      </div>
+    </nav>
+
+    <div class="center-content">
+      <div class="images"></div>
+      <h1 class="title text-white"><%= obj.title %></h1>
+      <h1 class="user">Published by: <%= obj.name %></h1>
+      <h1 class="keywords">#<%= obj.keyword %></h1>
+
+      <ul
+        class="w-full space-y-10 text-gray-500 list-disc list-inside dark:text-black-400 paragraph"
+        style="margin-top: 40px; width: 70%"
+      ></ul>
+    </div>
+
+    <div
+      class="footer bg-[#1c1c1c] w-[100%] mt-60 p-10 flex flex-col gap-4 justify-center items-center"
+    >
+      <div class="footer-heading">
+        <h1 class="text-white text-3xl font-semibold">Questions ?</h1>
+      </div>
+      <div class="footer-details">
+        <p class="text-[#b6b5b2]">
+          If there is something you want to tell us. You can Contact
+        </p>
+      </div>
+      <div class="footer-buttons flex gap-4 mt-6">
+        <button class="button-pink-filled">Github</button>
+        <button class="button-pink-outlined">Discord</button>
+      </div>
+    </div>
+
+    <script>
+      let url = `<%- obj.photos %>`;
+      let items = url.split(" ");
+      for (let i = 0; i < items.length; ++i) {
+        request = new XMLHttpRequest();
+        request.open("GET", items[i], true);
+        request.send(null);
+        request.onreadystatechange = function () {
+          if (request.readyState === 4) {
+            if (request.status === 200) {
+              let iti = document.createElement("img");
+              iti.src = request.responseURL;
+              document.querySelector(".images").appendChild(iti);
+            }
+          }
+        };
+      }
+
+      let para = `<%- obj.paragraph %>`.split(".");
+      for (let i = 0; i < para.length - 1; ++i) {
+        let arg = document.createElement("li");
+        arg.innerText = para[i];
+        arg.innerText += ".";
+        if (arg.innerHTML.length < 5 || arg.innerHTML == ".") {
+          continue;
+        }
+        document.querySelector(".paragraph").appendChild(arg);
+      }
+    </script>
+    <script src="/scripts/navbar.js"></script>
+  </body>
+</html>

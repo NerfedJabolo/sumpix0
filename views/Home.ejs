@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumpix | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/globals.css" />
+  </head>
+  <body>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <nav class="flex justify-between px-10 py-8 navbar">
+      <div class="navbar-left flex gap-6">
+        <div class="navbar-brand">
+          <img src="/assets/logo.png" alt="" width="55" height="55" />
+        </div>
+        <ul class="list flex gap-5">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/demss233">Github</a></li>
+          <li><a href="mailto:shivsatyam86@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <button class="button-pink-filled">Get Started</button>
+      </div>
+    </nav>
+    <div class="container w-[93%] flex flex-col items-center gap-60">
+      <div class="hero w-fit text-center flex flex-col gap-5">
+        <h1 class="text-white text-3xl sm:text-4xl">
+          Make note-taking a breeze with Sumpix! Fast, efficient, and totally
+          modern. 👋
+        </h1>
+        <p class="text-[#b6b5b2]">
+          Effortlessly summarize your notes with Sumpix! ✨ Make 'em pop and
+          share with anyone you please. Best of luck on your future endeavors!
+        </p>
+        <div class="buttons flex gap-4 w-fit mx-auto mt-6">
+          <button
+            class="button-pink-filled"
+            onclick="window.location.href='/create'"
+          >
+            Get Started
+          </button>
+          <button class="button-pink-outlined">Github</button>
+        </div>
+      </div>
+
+      <div class="features flex flex-col gap-40">
+        <div
+          class="card flex flex-col sm:flex-row w-[100%] justify-evenly items-center"
+        >
+          <div class="card-img">
+            <img
+              src="/assets/card-one.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+          </div>
+          <div
+            class="card-details w-[90%] mt-6 sm:mt-0 sm:w-[60%] flex flex-col gap-4"
+          >
+            <div class="card-heading">
+              <h1 class="text-white text-3xl">Summarise With Ease</h1>
+            </div>
+            <div class="card-text">
+              <p class="text-[#b6b5b2]">
+                Efficiently and quickly summarise any data and reduce the amount
+                of work you do. We are currently relying on a node module for
+                text summarisation. Make sure to give Sumpix a try and the
+                Github repository of the node module. You can also choose how
+                many useful sentences you want from the provided paragaph.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card flex flex-col sm:flex-row-reverse w-[100%] justify-evenly items-center flex-row-reverse"
+        >
+          <div class="card-img">
+            <img
+              src="/assets/card-two.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+          </div>
+          <div
+            class="card-details w-[90%] mt-6 sm:mt-0 sm:w-[60%] flex flex-col gap-4"
+          >
+            <div class="card-heading">
+              <h1 class="text-white text-3xl">Add visuals to your summary</h1>
+            </div>
+            <div class="card-text">
+              <p class="text-[#b6b5b2]">
+                You can add high quality and trusted images in your summaries
+                based on the keywords you provide. We are currently relying on
+                Unsplash for this service. The API is well built and easy to
+                use. We will surely suggest you to check out unsplash. You are
+                supposed to provide reasonable and correct keywords. Writing
+                vulgar keywords is strictly prohibited.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card flex flex-col sm:flex-row w-[100%] justify-evenly items-center"
+        >
+          <div class="card-img">
+            <img
+              src="/assets/card-three.png"
+              alt=""
+              width="300px"
+              height="400px"
+            />
+          </div>
+          <div
+            class="card-details w-[90%] mt-6 sm:mt-0 sm:w-[60%] flex flex-col gap-4"
+          >
+            <div class="card-heading">
+              <h1 class="text-white text-3xl">Share and enlighten.</h1>
+            </div>
+            <div class="card-text">
+              <p class="text-[#b6b5b2]">
+                The best part is that you can easily share these notes with your
+                friends and enlighten them. These short and sharp summaries will
+                also help them. We are currently using MongoDB Atlas to store
+                data because it is fast, certified and easy to use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="footer bg-[#1c1c1c] w-[100%] mt-60 p-10 flex flex-col gap-4 justify-center items-center"
+    >
+      <div class="footer-heading">
+        <h1 class="text-white text-3xl font-semibold">Questions ?</h1>
+      </div>
+      <div class="footer-details">
+        <p class="text-[#b6b5b2]">
+          If there is something you want to tell us. You can Contact
+        </p>
+      </div>
+      <div class="footer-buttons flex gap-4 mt-6">
+        <button class="button-pink-filled">Github</button>
+        <button class="button-pink-outlined">Discord</button>
+      </div>
+    </div>
+    <script src="/scripts/navbar.js"></script>
+  </body>
+</html>
