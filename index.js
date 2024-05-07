@@ -20,10 +20,10 @@ mongoose.connect(mongo_uri, connection_paramters).then(() => {
   console.log("connection with the database is established.");
 });
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/static")));
-app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (request, response) => {
   response.render("Home");
