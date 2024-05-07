@@ -20,14 +20,19 @@
           <img src="/assets/logo.png" alt="" width="55" height="55" />
         </div>
         <ul class="list flex gap-5">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="https://sumpix0.vercel.app/">Home</a></li>
+          <li><a href="https://sumpix0.vercel.app#features">Features</a></li>
           <li><a href="https://github.com/demss233">Github</a></li>
           <li><a href="mailto:shivsatyam86@gmail.com">Contact</a></li>
         </ul>
       </div>
       <div class="navbar-right">
-        <button class="button-pink-filled">Get Started</button>
+        <button
+          class="button-pink-filled"
+          onclick="window.location.href=`https://sumpix0.vercel.app/create`"
+        >
+          Get Started
+        </button>
       </div>
     </nav>
     <div class="container w-[93%] flex flex-col items-center gap-60">
@@ -43,11 +48,16 @@
         <div class="buttons flex gap-4 w-fit mx-auto mt-6">
           <button
             class="button-pink-filled"
-            onclick="window.location.href='/create'"
+            onclick="window.location.href='https://sumpix0.vercel.app/create'"
           >
             Get Started
           </button>
-          <button class="button-pink-outlined">Github</button>
+          <button
+            class="button-pink-outlined"
+            onclick="window.open('https://github.com/demss233')"
+          >
+            Github
+          </button>
         </div>
       </div>
 
@@ -67,7 +77,9 @@
             class="card-details w-[90%] mt-6 sm:mt-0 sm:w-[60%] flex flex-col gap-4"
           >
             <div class="card-heading">
-              <h1 class="text-white text-3xl">Summarise With Ease</h1>
+              <h1 class="text-white text-3xl" id="features">
+                Summarise With Ease
+              </h1>
             </div>
             <div class="card-text">
               <p class="text-[#b6b5b2]">
